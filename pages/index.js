@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Hero from "../components/Hero";
-import styles from "../styles/Home.module.css";
+import Instagram from "../components/Instagram";
+import Slider from "../components/Slider";
+import { SliderData } from "../components/SliderData";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Imagenes de todo</title>
 
@@ -16,6 +18,8 @@ export default function Home() {
         heading="Diseñando la vida"
         message="Diseñamos todo lo que puedas imaginar"
       />
+      <Slider slides={SliderData} />
+      <Instagram />
     </div>
   );
 }
